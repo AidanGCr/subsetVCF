@@ -139,44 +139,12 @@ while getopts 'a:A:vVs:S:h' OPTION; do
       subMultiVCF $1 $2 $3 $4 $5 $inputFile
       ;;
     h) 
-      printf "Usage: $(basename $0) [-v|V] [-a|s <sample>] [-A|S <file>] <chrom> <start_pos> <end_pos> <id> <VCF>\n"
-      printf "A script for subsetting VCF files by gene.\n" 
-      printf "Input list after shifting optargs:\n" 
-      printf "1 - chrom\n"
-      printf "2 - start pos\n" 
-      printf "3 - end pos\n"
-      printf "4 - identifier for output dir\n"
-      printf "5 - input VCF\n"
-      printf "Use -a to annotate a single sample with Annovar\n"
-      printf "Use -A to annotate many samples with Annovar\n" 
-      printf "Use -v to subset all samples in the input VCF\n"
-      printf "Use -V to subset and annotate all samples in the input VCF\n"
-      printf "Use -s to select only one sample for subsetting in the input VCF\n"
-      printf "Use -S to select many samples for subsetting in the input VCF\n" 
-      printf "Note that this script works with VCF files that have all samples together to\n" 
-      printf "start with, and where the reference genome is hg38.\n" 
-      printf "Example usage:\n" 
-      printf "./subsetVCF.sh -v 17 43044295 43125364 BRCA1 in.vcf\n" 
+      printf "Invalid Command\n"
+      printf "Visit for help: https://github.com/AidanGCr/subsetVCF\n" 
       ;;
     ?) 
-      printf "Usage: $(basename $0) [-v|V] [-a|s <sample>] [-A|S <file>] <chrom> <start_pos> <end_pos> <id> <VCF>\n"
-      printf "A script for subsetting VCF files by gene.\n" 
-      printf "Input list after shifting optargs:\n" 
-      printf "1 - chrom\n"
-      printf "2 - start pos\n" 
-      printf "3 - end pos\n"
-      printf "4 - identifier for output dir\n"
-      printf "5 - input VCF\n"
-      printf "Use -a to annotate a single sample with Annovar\n"
-      printf "Use -A to annotate many samples with Annovar\n" 
-      printf "Use -v to subset all samples in the input VCF\n"
-      printf "Use -V to subset and annotate all samples in the input VCF\n"
-      printf "Use -s to select only one sample for subsetting in the input VCF\n"
-      printf "Use -S to select many samples for subsetting in the input VCF\n" 
-      printf "Note that this script works with VCF files that have all samples together to\n" 
-      printf "start with, and where the reference genome is hg38.\n" 
-      printf "Example usage:\n" 
-      printf "./subsetVCF.sh -v 17 43044295 43125364 BRCA1 in.vcf\n" 
+      printf "Invalid Command\n"
+      printf "Visit for help: https://github.com/AidanGCr/subsetVCF\n" 
       ;;
   esac
 done

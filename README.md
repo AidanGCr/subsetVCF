@@ -13,29 +13,23 @@ subsetVCF.sh is the main (and currently only) script. It will work with hg38
 (human) and I am unsure about usage with other reference genomes. The script is 
 meant to be used on an HPC, specifically the Compute Canada clusters. As such
 it uses calls to the module command which will not work when running locally. 
-Lastly, this tools uses other programs which it assumes are preinstalled such
+Lastly, this tool uses other programs which it assumes are preinstalled such
 as [bcftools](https://samtools.github.io/bcftools/howtos/index.html), 
 [samtools](http://www.htslib.org/), and [Annovar](https://annovar.openbioinformatics.org/en/latest/). 
 
 Options passable are (alphabetical order): 
 
 - -a to annotate a single sample with Annovar 
-    - Command: -a \<dir> \<sample> \<chrom> \<start_pos> \<end_pos> \<id> \<VCF> 
+    - Command: -a \<dir> \<VCF> 
     - \<dir> is the directory containing the databases Annovar will use for 
     region annotation. 
-    - \<sample> is the single sample ID as found in the input VCF.
-    - \<chrom>, <start_pos>, <end_pos> all define the region of interest. 
-    - \<ID> is the ID that will be used to identify the output directory.
     - \<VCF> is the input VCF 
 
 - -A to annotate many samples with Annovar 
     - Command: -A \<dir> \<file> \<chrom> \<start_pos> \<end_pos> \<id> \<VCF>
     - \<dir> is the directory containing the databases Annovar will use for 
     region annotation. 
-    - \<file> is the file containing a list of samples to be annotated.
-    - \<chrom>, <start_pos>, <end_pos> all define the region of interest. 
-    - \<ID> is the ID that will be used to identify the output directory.
-    - \<VCF> is the input VCF 
+    - \<file> is the file containing a list of VCFs to be annotated.
 
 - -v to subset all samples in the input VCF 
     - Command: -v \<chrom> \<start_pos> \<end_pos> \<id> \<VCF> 
@@ -70,4 +64,50 @@ Any list input should be of the form:
 sample1 
 sample2
 sample3 
-... 
+...
+
+## Examples
+
+#### -a 
+
+Command: -a annover_db in.vcf 
+
+Output will be a directory "outdir_BRCA2" with a file containing annotated variants 
+from the input VCF for the given sample. 
+
+#### -A 
+
+Command: -A annovar_db vcf_list
+
+Output will be a directory "outdir_BRCA2" with files containing annotated variants
+for all VCFs as indicated in the vcf_list. See above for list format. 
+
+#### -v 
+
+Command: -v 13 32315508 32400268 BRCA2 in.vcf 
+
+Output will be a directory "outdir_BRCA2" with subsetted VCFs for the given region, 
+for all samples in the VCF. 
+
+#### -V 
+
+Command: -V annovar_db 13 32315508 32400268 BRCA2 in.vcf 
+
+Output will be a directory "outdir_BRCA2" with subsetted VCF's for each sample in 
+the input VCF, and annotation for each aforementioned subsetted VCF.
+
+#### -s 
+
+Command: -s sample1 13 32315508 32400268 BRCA2 in.vcf  
+
+Output will be a directory "outdir_BRCA2" with subsetted VCFs for the given region, 
+but only for the sample specified. 
+
+#### -S 
+
+Command: -S sample_list 13 32315508 32400268 BRCA2 in.vcf 
+
+Output will be a directory "outdir_BRCA2" with subsetted VCFs for the given region, 
+but only for the samples specified in the sample_list file. See above for list format.  
+
+
