@@ -93,10 +93,12 @@ function annoVCF {
 
 #function for the -a option. Mean to annotate a single VCF. 
 function annoOneVCF { 
+    return 1
 } 
 
 #function for the -A option. Meant to annotate a sequence of VCF files.  
 function annoMultiVCF { 
+    return 1
 } 
 
 while getopts 'a:A:vVs:S:h' OPTION; do
