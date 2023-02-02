@@ -1,18 +1,10 @@
 #A script for subsetting VCF files by gene.
-#Input list after shifting optargs: 
-#1 - chrom
-#2 - start ps 
-#3 - end pos
-#4 - identifier for output dir 
-#5 - input VCF 
 #Use -a to annotate a single sample with Annovar 
 #Use -A to annotate many samples with Annovar 
 #Use -v to subset all samples in the input VCF 
 #Use -V to subset and annotate all samples in the input VCF
 #Use -s to select only one sample for subsetting in the input VCF
 #Use -S to select many samples for subsetting in the input VCF 
-#Note that this script works with VCF files that have all samples together to 
-#start with, and where the reference genome is hg38. 
 #Example usage: 
 #./subsetVCF.sh -v 17 43044295 43125364 BRCA1 in.vcf
 
