@@ -61,9 +61,9 @@ Options passable are (alphabetical order):
 
 Any list input should be of the form: 
 
-sample1 
-sample2
-sample3 
+sample1\n 
+sample2\n
+sample3\n
 ...
 
 ## Examples
