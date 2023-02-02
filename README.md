@@ -20,7 +20,7 @@ as [bcftools}(https://samtools.github.io/bcftools/howtos/index.html),
 Options passable are (alphabetical order): 
 
 - -a to annotate a single sample with Annovar 
-    - Command: -a <dir> <sample> <chrom> <start_pos> <end_pos> <id> <VCF> 
+    - Command: -a \<dir> <sample> <chrom> <start_pos> <end_pos> <id> <VCF> 
     - <dir> is the directory containing the databases Annovar will use for 
     region annotation. 
     - <sample> is the single sample ID as found in the input VCF.
