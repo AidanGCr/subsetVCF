@@ -20,7 +20,7 @@ as [bcftools](https://samtools.github.io/bcftools/howtos/index.html),
 Options passable are (alphabetical order): 
 
 - -a to annotate a single sample with Annovar 
-    - Command: -a <dir> <sample> <chrom> <start_pos> <end_pos> <id> <VCF> 
+    - Command: -a \<dir> \<sample> \<chrom> \<start_pos> \<end_pos> \<id> \<VCF> 
     - \<dir> is the directory containing the databases Annovar will use for 
     region annotation. 
     - \<sample> is the single sample ID as found in the input VCF.
@@ -29,7 +29,7 @@ Options passable are (alphabetical order):
     - \<VCF> is the input VCF 
 
 - -A to annotate many samples with Annovar 
-    Command: -A <dir> <file> <chrom> <start_pos> <end_pos> <id> <VCF>
+    - Command: -A \<dir> \<file> \<chrom> \<start_pos> \<end_pos> \<id> \<VCF>
     - \<dir> is the directory containing the databases Annovar will use for 
     region annotation. 
     - \<file> is the file containing a list of samples to be annotated.
@@ -38,13 +38,13 @@ Options passable are (alphabetical order):
     - \<VCF> is the input VCF 
 
 - -v to subset all samples in the input VCF 
-    Command: -v <chrom> <start_pos> <end_pos> <id> <VCF> 
+    - Command: -v \<chrom> \<start_pos> \<end_pos> \<id> \<VCF> 
     - \<chrom>, <start_pos>, <end_pos> all define the region of interest. 
     - \<ID> is the ID that will be used to identify the output directory.
     - \<VCF> is the input VCF
 
 - -V to subset and annotate all samples in the input VCF 
-    Command: -V <dir> <chrom> <start_pos> <end_pos> <id> <VCF>
+    - Command: -V \<dir> \<chrom> \<start_pos> \<end_pos> \<id> \<VCF>
     - \<dir> is the directory containing the databases Annovar will use for 
     region annotation. 
     - \<chrom>, <start_pos>, <end_pos> all define the region of interest. 
@@ -52,14 +52,14 @@ Options passable are (alphabetical order):
     - \<VCF> is the input VCF
 
 - -s to select only one sample for subsetting in the input VCF 
-    Command: -s <sample> <chrom> <start_pos> <end_pos> <id> <VCF> 
+    - Command: -s \<sample> \<chrom> \<start_pos> \<end_pos> \<id> \<VCF> 
     - \<sample> is the single sample ID as found in the input VCF.
     - \<chrom>, <start_pos>, <end_pos> all define the region of interest. 
     - \<ID> is the ID that will be used to identify the output directory.
     - \<VCF> is the input VCF 
 
 - -S to select many samples for subsetting in the input VCF 
-    Command: -S <file> <chrom> <start_pos> <end_pos> <id> <VCF>
+    - Command: -S \<file> \<chrom> \<start_pos> \<end_pos> \<id> \<VCF>
     - \<file> is the file containing a list of samples to be annotated.
     - \<chrom>, <start_pos>, <end_pos> all define the region of interest. 
     - \<ID> is the ID that will be used to identify the output directory.
