@@ -2,9 +2,9 @@
 
 SubsetVCF is a script I am writing to ease my workflow in my Master's thesis 
 project. Its main functionality is to subset VCF files by gene region, sample
-ID, or multiple sample ID's. Upcoming commits will add annotation capabilities 
-through [Annovar](https://annovar.openbioinformatics.org/en/latest/), and also
-for the subsetting of BAM files. This readme will be updated when those 
+ID, or multiple sample ID's. Upcoming commits will add region annotation 
+capabilities through [Annovar](https://annovar.openbioinformatics.org/en/latest/)
+, and also for the subsetting of BAM files. This readme will be updated when those 
 features are implemented. 
 
 ### Usage
