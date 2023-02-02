@@ -2,7 +2,7 @@
 
 SubsetVCF is a script I am writing to ease my workflow in my Master's thesis 
 project. Its main functionality is to subset VCF files by gene region, sample
-id, or multiple sample id's. Upcoming commits will add region annotation 
+id, or multiple sample id's. Upcoming commits will add filter annotation 
 capabilities through [Annovar](https://annovar.openbioinformatics.org/en/latest/)
 , and also for the subsetting of BAM files. This readme will be updated when those 
 features are implemented. 
@@ -22,13 +22,13 @@ Options passable are (alphabetical order):
 - -a to annotate a single VCF with Annovar 
     - Command: -a \<dir> \<VCF> 
     - \<dir> is the directory containing the databases Annovar will use for 
-    region annotation. 
+    filter annotation. 
     - \<VCF> is the input VCF. 
 
 - -A to annotate many VCFs with Annovar 
     - Command: -A \<dir> \<file> \<id>
     - \<dir> is the directory containing the databases Annovar will use for 
-    region annotation. 
+    filter annotation. 
     - \<file> is the file containing a list of VCFs to be annotated.
     - \<id> is the id that will be used to identify the output directory.
 
@@ -41,7 +41,7 @@ Options passable are (alphabetical order):
 - -V to subset and annotate all samples in the input VCF 
     - Command: -V \<dir> \<chrom> \<start_pos> \<end_pos> \<id> \<VCF>
     - \<dir> is the directory containing the databases Annovar will use for 
-    region annotation. 
+    filter annotation. 
     - \<chrom>, <start_pos>, <end_pos> all define the region of interest. 
     - \<id> is the id that will be used to identify the output directory.
     - \<VCF> is the input VCF.

@@ -87,7 +87,7 @@ function annoVCF {
     #enter VCF directory and annotate each 
     cd outdir_$1 
     for file in *; do 
-
+        printf "unimplemented\n" 
     done 
 }
 
