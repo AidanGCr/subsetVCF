@@ -1,4 +1,6 @@
-#A script for subsetting VCF files by gene.
+#A script for subsetting VCF files by region, subsetting BAMs, and annotating
+#by region with Annovar.
+#See the githib for help: https://github.com/AidanGCr/subsetVCF
 #Use -a to annotate a single sample with Annovar 
 #Use -A to annotate many samples with Annovar 
 #Use -v to subset all samples in the input VCF 
