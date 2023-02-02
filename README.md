@@ -14,14 +14,14 @@ subsetVCF.sh is the main (and currently only) script. It will work with hg38
 meant to be used on an HPC, specifically the Compute Canada clusters. As such
 it uses calls to the module command which will not work when running locally. 
 Lastly, this tools uses other programs which it assumes are preinstalled such
-as [bcftools}(https://samtools.github.io/bcftools/howtos/index.html), 
+as [bcftools](https://samtools.github.io/bcftools/howtos/index.html), 
 [samtools](http://www.htslib.org/), and [Annovar](https://annovar.openbioinformatics.org/en/latest/). 
 
 Options passable are (alphabetical order): 
 
 - -a to annotate a single sample with Annovar 
-    - Command: -a \<dir> <sample> <chrom> <start_pos> <end_pos> <id> <VCF> 
-    - <dir> is the directory containing the databases Annovar will use for 
+    - Command: -a <dir> <sample> <chrom> <start_pos> <end_pos> <id> <VCF> 
+    - \<dir> is the directory containing the databases Annovar will use for 
     region annotation. 
     - <sample> is the single sample ID as found in the input VCF.
     - <chrom>, <start_pos>, <end_pos> all define the region of interest. 
@@ -30,7 +30,7 @@ Options passable are (alphabetical order):
 
 - -A to annotate many samples with Annovar 
     Command: -A <dir> <file> <chrom> <start_pos> <end_pos> <id> <VCF>
-    - <dir> is the directory containing the databases Annovar will use for 
+    - \<dir> is the directory containing the databases Annovar will use for 
     region annotation. 
     - <file> is the file containing a list of samples to be annotated.
     - <chrom>, <start_pos>, <end_pos> all define the region of interest. 
@@ -45,7 +45,7 @@ Options passable are (alphabetical order):
 
 - -V to subset and annotate all samples in the input VCF 
     Command: -V <dir> <chrom> <start_pos> <end_pos> <id> <VCF>
-    - <dir> is the directory containing the databases Annovar will use for 
+    - \<dir> is the directory containing the databases Annovar will use for 
     region annotation. 
     - <chrom>, <start_pos>, <end_pos> all define the region of interest. 
     - <ID> is the ID that will be used to identify the output directory.
@@ -53,14 +53,14 @@ Options passable are (alphabetical order):
 
 - -s to select only one sample for subsetting in the input VCF 
     Command: -s <sample> <chrom> <start_pos> <end_pos> <id> <VCF> 
-    - <sample> is the single sample ID as found in the input VCF.
+    - \<sample> is the single sample ID as found in the input VCF.
     - <chrom>, <start_pos>, <end_pos> all define the region of interest. 
     - <ID> is the ID that will be used to identify the output directory.
     - <VCF> is the input VCF 
 
 - -S to select many samples for subsetting in the input VCF 
     Command: -S <file> <chrom> <start_pos> <end_pos> <id> <VCF>
-    - <file> is the file containing a list of samples to be annotated.
+    - \<file> is the file containing a list of samples to be annotated.
     - <chrom>, <start_pos>, <end_pos> all define the region of interest. 
     - <ID> is the ID that will be used to identify the output directory.
     - <VCF> is the input VCF 
