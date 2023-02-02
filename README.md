@@ -73,14 +73,13 @@ sample3\
 
 Command: -a annover_db vcf1 in.vcf 
 
-Output will be a directory "outdir_BRCA2" with a file containing annotated variants 
-from the input VCF. 
+Output will be a file containing annotated variants from the input VCF. 
 
 #### -A 
 
-Command: -A annovar_db vcf_list
+Command: -A annovar_db vcf_list exID
 
-Output will be a directory "outdir_BRCA2" with files containing annotated variants
+Output will be a directory "outdir_exID" with files containing annotated variants
 for all VCFs as indicated in the vcf_list. See above for list format. 
 
 #### -v 
