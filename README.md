@@ -2,11 +2,10 @@
 
 SubsetVCF is a script I am writing to ease my workflow in my Master's thesis 
 project. Its main functionality is to subset VCF files by gene region, sample
-id, or multiple sample id's. Upcoming commits will add table annotation (with 
-table_annovar.pl) capabilities through 
-[Annovar](https://annovar.openbioinformatics.org/en/latest/), 
-and also for the subsetting of BAM files. This readme will be updated when 
-those features are implemented. 
+id, or multiple sample id's. Annotation is done through 
+[Annovar](https://annovar.openbioinformatics.org/en/latest/), (with 
+table_annovar.pl). I may also add BAM file manipulation. This readme will be 
+updated when those features are implemented. 
 
 ### Usage
 
@@ -14,10 +13,13 @@ subsetVCF.sh is the main (and currently only) script. It will work with hg38
 (human) and I am unsure about usage with other reference genomes. The script is 
 meant to be used on an HPC, specifically the Compute Canada clusters. As such
 it uses calls to the module command which will not work when running locally. 
+Note that Annovar assumes that annotation databases are downloaded to a 
+directory stipulated in the command line options (see below for more). 
 Lastly, this tool uses other programs which it assumes are preinstalled such
 as [bcftools](https://samtools.github.io/bcftools/howtos/index.html), 
 [samtools](http://www.htslib.org/), and 
-[Annovar](https://annovar.openbioinformatics.org/en/latest/). 
+[Annovar](https://annovar.openbioinformatics.org/en/latest/). These tools 
+should be availeble through a "module load <pakcage>" command. 
 
 Options passable are (alphabetical order): 
 
